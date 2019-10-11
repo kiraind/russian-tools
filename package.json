@@ -1,0 +1,27 @@
+{
+    "name": "russian-tools",
+    "version": "1.0.0",
+    "description": "JS-библиотека с готовыми алгоритмами работы с русским языком",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kiraind/russian-tools.git"
+    },
+    "keywords": [
+        "russian",
+        "language",
+        "linguistics"
+    ],
+    "author": "kiraind",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/kiraind/russian-tools/issues"
+    },
+    "homepage": "https://github.com/kiraind/russian-tools#readme",
+    "devDependencies": {
+        "jest": "^24.9.0"
+    }
+}

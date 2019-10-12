@@ -1,8 +1,6 @@
 const LETTER_CASE = require('./../../constants/letter_case.js')
 const SOUND_TYPE = require('./../../constants/letter_sound_type.js')
 
-const getLetterSoundType = require('./../letter-utils/getLetterSoundType.js')
-
 /**
  * @param {number} n
  */
@@ -43,7 +41,7 @@ function hyphenateWord(
         return [ word ]
     }
 
-    const sound_types = chars.map(getLetterSoundType)
+    const sound_types = chars.map(SOUND_TYPE.from)
     const allowed = [ true ].repeat(chars.length - 1)
 
     // find left syllable

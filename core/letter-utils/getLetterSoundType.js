@@ -5,12 +5,13 @@ const {
     MODIFIER,
     HYPNEN,
     NONE,
-} = require('russian-tools/constants/letter_sound_type.js')
+} = require('./../../constants/letter_sound_type.js')
 
 /**
  * Guesses LETTER_SOUND_TYPE from char
  * Угадывает LETTER_SOUND_TYPE по символу
  * @param {string} letter 1-char string with letter
+ * @returns {number}
  */
 function getLetterSoundType(letter) {
     if(typeof letter !== 'string') {

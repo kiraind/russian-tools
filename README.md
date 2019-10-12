@@ -36,3 +36,14 @@ const { selectPostnumberCase } = require('@kiraind/russian-tools').word_utils
 selectPostnumberCase(113,  [ 'машина', 'машины', 'машин' ])  // машин
 selectPostnumberCase(5321, [ 'рубль', 'рубля', 'рублей' ])   // рубль
 ```
+
+### textifyNumber
+
+Функция конвертирует целое число в текстовый вид
+
+```javascript
+const { textifyNumber } = require('@kiraind/russian-tools').word_utils
+
+textifyNumber(7654321) // 'семь миллионов шестьсот пятьдесят четыре тысячи триста двадцать один'
+textifyNumber(-10) // 'минус десять'
+```

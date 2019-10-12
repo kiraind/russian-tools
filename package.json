@@ -1,6 +1,6 @@
 {
     "name": "@kiraind/russian-tools",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "JS-библиотека с готовыми алгоритмами работы с русским языком",
     "main": "index.js",
     "scripts": {

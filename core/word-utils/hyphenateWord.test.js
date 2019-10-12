@@ -1,9 +1,5 @@
 const hyphenateWord = require('./hyphenateWord.js')
 
-// console.log(
-//     hyphenateWord('СПбГУГА')
-// )
-
 test('abbreviation СПбГУГА to not divide', () => {
     expect(
         hyphenateWord('СПбГУГА')

@@ -20,6 +20,10 @@ const LETTER_CASE = {
  * @param {string} char
  */
 LETTER_CASE.from = char => {
+    if(typeof char !== 'string') {
+        throw new TypeError('char argument must be a string')
+    }
+
     if(char.toLowerCase() === char.toUpperCase()) {
         return LETTER_CASE.NONE
     } else if(char.toLowerCase() === char) {

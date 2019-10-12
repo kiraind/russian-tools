@@ -1,4 +1,4 @@
-const LETTER_SOUND_TYPE = require('russian-tools/constants/letter_sound_type.js')
+const LETTER_SOUND_TYPE = require('./letter_sound_type.js')
 const {
     VOICELESS_CONSONANT,
     MODIFIER,

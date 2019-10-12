@@ -1,6 +1,12 @@
 # russian-tools
 JS-библиотека с готовыми алгоритмами работы с русским языком
 
+## Установка
+
+```shell
+npm i @kiraind/russian-tools
+```
+
 ## Работа со словами
 
 ### hyphenateWord
@@ -10,7 +16,7 @@ JS-библиотека с готовыми алгоритмами работы 
 ```javascript
 const { hyphenateWord } = require('@kiraind/russian-tools').word_utils
 
-const text = 'Эй кто-нибудь ответь'
+const text = 'Эй дружок СПбГУГА ответь'
 
 const hypnenated = text
     .split(' ') // [ 'Эй', 'дружок', 'СПбГУГА', 'ответь' ]

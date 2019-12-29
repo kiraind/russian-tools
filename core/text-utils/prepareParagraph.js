@@ -67,9 +67,19 @@ function prepareParagraph(text) {
 
     // remove double spaces
     for(let i = 0; i < tokens.length; i += 1) {
-
-        while(tokens[i].str === ' ' && tokens[i + 1].str === ' ') {
+        while(tokens[i].str === ' ' && tokens[i + 1] && tokens[i + 1].str === ' ') {
             tokens.splice(i + 1, 1)
+        }
+    }
+
+    // replace en-dashes and dashes surrounded by spaces with em-dashes
+    for(let i = 0; i < tokens.length; i += 1) {
+        if(
+            (tokens[i].str === '\u2013' /* en-dash */ || tokens[i].str === '-') &&
+            (!tokens[i - 1] || tokens[i - 1].str === ' ' || tokens[i - 1].str === '\n') &&
+            (!tokens[i + 1] || tokens[i + 1].str === ' ' || tokens[i + 1].str === '\n')
+        ) {
+            tokens[i].str = '\u2014' // em-dash
         }
     }
 
@@ -84,6 +94,18 @@ function prepareParagraph(text) {
         }
     }
 
+    // insert nbsp before em-dash ('\u2014')
+    for(let i = 1; i < tokens.length; i += 1) {
+        if(
+            tokens[i].type === TYPES.CHAR &&
+            tokens[i].str  === '\u2014'   && // em-dash
+
+            tokens[i - 1].str === ' '
+        ) {
+            tokens[i - 1].str = nbsp
+        }
+    }
+
     // hypnenate words
     for(let i = 0; i < tokens.length; i += 1) {
         if(
@@ -93,6 +115,7 @@ function prepareParagraph(text) {
         }
     }
 
+    // glue everything
     return tokens
         .map(token => token.str)
         .join('')

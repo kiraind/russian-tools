@@ -13,8 +13,6 @@ const TYPES = {
  * @param {string} text 
  */
 function prepareParagraph(text) {
-    // console.log(text)
-
     const tokens = []
     
     let insideWord = false
@@ -58,6 +56,13 @@ function prepareParagraph(text) {
                 })
             }
         }
+    }
+
+    if(currentWord) {
+        tokens.push({
+            type: TYPES.WORD,
+            str: currentWord,
+        })
     }
 
     // remove double spaces

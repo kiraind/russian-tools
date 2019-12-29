@@ -7,6 +7,7 @@ const NUMBER            = require('./constants/number.js')
 
 const letter_utils = require('./core/letter-utils/index.js')
 const word_utils   = require('./core/word-utils/index.js')
+const text_utils   = require('./core/text-utils/index.js')
 
 module.exports = {
     ANIMACY,
@@ -18,4 +19,5 @@ module.exports = {
 
     letter_utils,
     word_utils,
+    text_utils,
 }

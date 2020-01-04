@@ -12,7 +12,12 @@ const TYPES = {
  * 
  * @param {string} text 
  */
-function prepareParagraph(text) {
+function prepareParagraph(
+    text,
+    {
+        hypnenate=true,
+    }={}
+) {
     const tokens = []
     
     let insideWord = false
@@ -107,11 +112,13 @@ function prepareParagraph(text) {
     }
 
     // hypnenate words
-    for(let i = 0; i < tokens.length; i += 1) {
-        if(
-            tokens[i].type === TYPES.WORD
-        ) {
-            tokens[i].str = hypnenateWord( tokens[i].str ).join(hypnen_place)
+    if(hypnenate) {
+        for(let i = 0; i < tokens.length; i += 1) {
+            if(
+                tokens[i].type === TYPES.WORD
+            ) {
+                tokens[i].str = hypnenateWord( tokens[i].str ).join(hypnen_place)
+            }
         }
     }
 

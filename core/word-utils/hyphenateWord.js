@@ -103,6 +103,12 @@ function hyphenateWord(
             sound_types[i + 2] !== SOUND_TYPE.VOWEL
         ) {
             allowed[i] = false
+        } else if(
+            // around hypnens
+            leftType  === SOUND_TYPE.HYPNEN ||
+            rightType === SOUND_TYPE.HYPNEN
+        ) {
+            allowed[i] = false
         }
     }
 

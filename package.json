@@ -22,6 +22,6 @@
     },
     "homepage": "https://github.com/kiraind/russian-tools#readme",
     "devDependencies": {
-        "jest": "^24.9.0"
+        "jest": "^25.5.4"
     }
 }

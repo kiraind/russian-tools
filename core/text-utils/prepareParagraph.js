@@ -1,7 +1,7 @@
 const hypnenateWord = require('../word-utils/hyphenateWord.js')
 
-const nbsp         = '&nbsp;'
-const hypnen_place = '&shy;'
+const nbsp         = '\u00A0'
+const hypnen_place = '\u00AD'
 
 const TYPES = {
     WORD: 0,
